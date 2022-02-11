@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams-Chat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-window">
+        <div class="navbar">
+            <div class="search"></div>
+            <div class="icon-buttons">
+                <div class="settings_and_more hovers"></div>
+                <div class="user_avatar hovers"></div>
+                <div class="minimise hovers"></div>
+                <div class="maximise hovers"></div>
+                <div class="close hovers-red"></div>
+            </div>
+        </div>
+        <div class="main-arena">
+            <div class="side-bar">
+                <div class="activity  material-icons">notifications</div>
+                <div class="chat material-icons">chat</div>
+                <div class="calendar  material-icons">calendar_today</div>
+            </div>
+            <div class="selected-bar">
+                <div class="selected-bar-top">
+                    <p style="width:60%;margin-left:1.5vw;">Chat</p>
+                    <div class="selected-bar-icons">
+                        <div class="filter material-icons">filter_list</div>
+                        <div class="new-meeting video material-icons" onclick="videobtn()">video_call</div>
+                        <div class="new-chat material-icons">mark_chat_unread</div>
+                    </div>
+                    <div class="contacts"></div>
+                </div>
+            </div>
+            <div class="selected-chat">
+                <div class="chat-details">
+                    <div class="grp-name"></div>
+                    <div class="messages">Messages</div>
+                    <div class="files">Files</div>
+                    <div class="photos">Photos</div>
+                    <button class="join-meeting" onclick="joinmeeting()">Join Meeting</button>
+                    <button class="copy-btn material-icons">content_paste</button>
+                </div>
+                <div class="message-area">
+                    <div class="message-left">
+                        <span>Vatsal Mehta</span>
+                        <div class="message-content">Hemlo World</div>
+                    </div>
+                    <div class="message-right">
+                        <span>Shreyas ISM</span>
+                        <div class="message-content"></div>
+                    </div>
+                    <div class="user-joined">
+                        <h3>User Joined</h3>
+                    </div>
+                </div>
+                <div class="message-sender">
+                        <input placeholder="Type Your Message Here..." class="input-message">
+                        <button class="send_message_btn" >Send</button>
+                </div>
+                <div class="attendee-count"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+   <script src="frontend.js"></script>
+   
+</body>
+
+</html>
